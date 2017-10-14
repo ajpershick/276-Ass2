@@ -10,5 +10,14 @@
       <user-name>postgres</user-name>
       <introspection-schemas>ass2_development:public</introspection-schemas>
     </data-source>
+    <data-source name="Rails Ass2-276: development" uuid="f8882ac4-e0c4-433f-b89a-21efaa3d9db5">
+      <database-info product="PostgreSQL" version="9.5.9" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <introspection-schemas>ass2_development:public</introspection-schemas>
+    </data-source>
   </component>
 </project>

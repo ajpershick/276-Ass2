@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Histogram Generator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../app/assets/stylesheets/ass1_styles.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <h1>Histogram Generator</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>Lower bounds</h4>
+            <div class="lower_grades">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>Max</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="Max" onkeyup="calculate()" onchange="checkNum(event, this)">100</textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>A+</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="A+" onkeyup="calculate()" onchange="checkNum(event, this)">95</textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>A</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="A" onkeyup="calculate()" onchange="checkNum(event, this)">90</textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>A-</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="A-" onkeyup="calculate()" onchange="checkNum(event, this)">85</textarea>                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>B+</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="B+" onkeyup="calculate()" onchange="checkNum(event, this)">80</textarea>                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>B</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="B" onkeyup="calculate()" onchange="checkNum(event, this)">75</textarea>                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>B-</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="B-" onkeyup="calculate()" onchange="checkNum(event, this)">70</textarea>                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>C+</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="C+" onkeyup="calculate()" onchange="checkNum(event, this)">65</textarea>                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>C</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="C" onkeyup="calculate()" onchange="checkNum(event, this)">60</textarea>                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>C-</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="C-" onkeyup="calculate()" onchange="checkNum(event, this)">55</textarea>                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>D</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="D" onkeyup="calculate()" onchange="checkNum(event, this)">50</textarea>                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>F</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <textarea autocomplete="off" maxlength="5" rows=1 itemtype="number" id="F" onkeyup="calculate()" onchange="checkNum(event, this)">0</textarea>                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <h4>Histogram</h4>
+            <div class="hist_grades">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>A+</p>
+                    </div>
+                        <div class="col-xs-8" id="hist1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>A</p>
+                    </div>
+                        <div class="col-xs-8" id="hist2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>A-</p>
+                    </div>
+                    <div class="col-xs-8" id="hist3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>B+</p>
+                    </div>
+                    <div class="col-xs-8" id="hist4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>B</p>
+                    </div>
+                    <div class="col-xs-8" id="hist5"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>B-</p>
+                    </div>
+                    <div class="col-xs-8" id="hist6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>C+</p>
+                    </div>
+                    <div class="col-xs-8" id="hist7"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>C</p>
+                    </div>
+                    <div class="col-xs-8" id="hist8"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>C-</p>
+                    </div>
+                    <div class="col-xs-8" id="hist9"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>D</p>
+                    </div>
+                    <div class="col-xs-8" id="hist10"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <p>F</p>
+                    </div>
+                    <div class="col-xs-8" id="hist11"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <script src="../app/assets/javascripts/calculate.js"></script>
+</body>
+</html>
+

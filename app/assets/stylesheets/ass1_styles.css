@@ -1,0 +1,75 @@
+.container-fluid h1 {
+    font-size: 50px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 3%;
+}
+
+.col-sm-6 {
+    margin-left: 3%;
+    margin-right: 20px;
+    background-color: #edf0f4;
+    border: solid lightsteelblue;
+    border-width: thin;
+    border-radius: 5px;
+}
+
+.col-sm-5 {
+    margin-right: 3%;
+    background-color: #edf0f4;
+    border: solid lightsteelblue;
+    border-width: thin;
+    border-radius: 5px;
+}
+
+.col-xs-8 {
+    padding: 15px;
+}
+
+.glyphicon {
+    float:left !important;
+    line-height: 0px !important;
+    top: 0px !important;
+}
+
+.hist_grades {
+    padding: 40px;
+}
+
+.lower_grades {
+    padding: 40px;
+}
+
+.row h4 {
+    color: #c40000;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.row p {
+    font-family: serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+textarea {
+    font-size: 20px !important;
+    font-family: "Century Schoolbook L" !important;
+    width: 173px !important;
+    height: 50px !important;
+    text-align: center !important;
+    line-height: 50px !important;
+    resize: none !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+}
+
+textarea:focus {
+    -webkit-box-shadow: 0px 0px 4px #4195fc;
+    -moz-box-shadow: 0px 0px 4px #4195fc;
+    box-shadow: 0px 0px 4px #4195fc;
+}

@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20171011033344) do
 
   create_table "enrolls", force: :cascade do |t|
     t.integer "student_id"
-    t.string "course_id"
+    t.integer "course_id"
     t.float "percentage"
     t.string "lettergrade"
     t.datetime "created_at", null: false
