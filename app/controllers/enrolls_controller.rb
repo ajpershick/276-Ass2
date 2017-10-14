@@ -24,7 +24,10 @@ class EnrollsController < ApplicationController
   # POST /enrolls
   # POST /enrolls.json
   def create
-    @enroll = Enroll.new(enroll_params)
+    custom_params = enroll_params
+    custom_params[:student_id] = Student.find_by(student_id: custom_params[:student_id]).id
+    custom_params[:course_id] = Course.find_by(course_id: custom_params[:course_id]).id
+    @enroll = Enroll.new(custom_params)
 
     respond_to do |format|
       if @enroll.save
