@@ -34,6 +34,16 @@ class EnrollsController < ApplicationController
         format.html { redirect_to @enroll, notice: 'Enroll was successfully created.' }
         format.json { render :show, status: :created, location: @enroll }
       else
+        @enroll.student_id = enroll_params[:student_id]
+        @enroll.course_id = enroll_params[:course_id]
+        unless enroll_params[:student_id].blank?
+          @enroll.errors.messages.delete(:course_id)
+          @enroll.errors.details.delete(:course_id)
+        end
+        unless enroll_params[:student_id].blank?
+          @enroll.errors.messages.delete(:student_id)
+          @enroll.errors.details.delete(:student_id)
+        end
         format.html { render :new }
         format.json { render json: @enroll.errors, status: :unprocessable_entity }
       end
